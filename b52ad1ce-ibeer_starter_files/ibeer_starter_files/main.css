@@ -12,6 +12,7 @@ light tan: #eeebda
 
 */
 body{
+    margin: 0;
     font-family: 'Noto Serif', serif;
     line-height: 1.8;
     margin-left: 10px;
@@ -28,11 +29,11 @@ img{
     padding: 0;
     margin: 0;
     display: block;
+
 }
 .wrapper{
     width: 1000px;
 display: flex;
-align-content: center;
 flex-flow: row wrap;/*
         TODO:
         - Center up the page
@@ -51,13 +52,14 @@ flex-flow: row wrap;/*
 #site-header div{
 
 
-    padding: 60px 0 120px 0;
+    padding: 60px 20px 120px 0;
     font-size: 4em;
     background-image: url("./img/header-img.jpg");
     background-repeat: no-repeat;
     align-content: center;
     background-position: right bottom;
     background-size: cover;
+
     /*
         TODO:
         - Add a background image "header-img.jpg"
@@ -105,6 +107,7 @@ justify-content: flex-end;   /*
     padding: 10px 20px;
 
 
+
     /*
         TODO:
         - Flexbox - Create general spacing between nav links
@@ -116,6 +119,7 @@ justify-content: flex-end;   /*
     font-size: 24px;
     margin-right: 400px;
     flex-basis: 100%;
+    order: 0;
 
 
     /*
@@ -125,13 +129,18 @@ justify-content: flex-end;   /*
     */
 }
 main{
+
+    margin-left: 40px;
     display: flex;
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    align-content: space-between;
+    justify-content: center;
     flex-direction: column;
-    width: 400px;
+    width: 550px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+
 
     align-content: space-between;
     /*
@@ -147,9 +156,11 @@ aside{
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
     display: flex;
-    justify-content: flex-end;
-    width: 200px;
+    margin-bottom: 40px;
+    width: 180px;
     flex-direction: column;
+    font-size: 14pt;
+    margin-top: -60px;
 
 
 
@@ -163,15 +174,17 @@ aside{
     */
 }
 aside h3{
-    flex-grow: 1;
+
     text-align: center;
     margin: 0 0 10px 0;
     padding: 0 0 10px 0;
     border-bottom: 1px solid #ccc;
 }
 aside img{
-    border-radius: 50%;
-    margin-bottom: 30px;
+    width: 80%;
+    margin-top: 0;
+    border-radius: 60%;
+    margin-bottom: 20px;
     border: 2px solid white;
 }
 article{
@@ -181,7 +194,8 @@ article{
     padding: 20px;
     margin-bottom: 20px;
     flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+
 
 
 }
@@ -203,7 +217,9 @@ article time{
     color: #666;
 }
 article img{
-justify-content: flex-end;
+  width: 40%;
+
+
 
    /*
         TODO:
@@ -212,8 +228,12 @@ justify-content: flex-end;
     */
 }
 article footer p{
-  padding: 60px 0 120px 0;
-  font-size: 4em;
+
+  border-top: 1px solid gray;
+  padding: 5px 0 5px 0;
+  font-size: 1em;
+  text-align: center;
+
     /*
         TODO:
         - Style the article footer
@@ -221,7 +241,11 @@ article footer p{
     */
 }
 #site-footer{
+  padding: 15px;
+  color: white;
+  width: 1000px;
   display: flex;
+  justify-content: center;
 
     background: #333;
     /*
